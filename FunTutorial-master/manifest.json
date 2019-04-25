@@ -1,0 +1,36 @@
+{
+  "name": "test",
+  "version": "0.0.32",
+  "description": "test",
+  "icons": {
+    	"16": "images/puppy16.png",
+    	"48": "images/puppy48.png",
+    	"128": "images/puppy.png"
+    },
+"browser_action":
+	{
+	"default_icon": "images/puppy.png",
+    "default_popup": "popup.html"
+	}, 
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "firebase.js",
+      "firebase-app.js",
+      "firebase-database.js",
+      "background.js"
+    ]
+  },
+  "short_name": "test",
+  "permissions": [
+    "activeTab", 
+    "tabs",
+    "https://*/*",
+    "http://*/*",
+    "storage",
+     "declarativeContent"
+  ],
+
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'",
+  "manifest_version": 2
+}
